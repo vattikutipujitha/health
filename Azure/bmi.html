@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+.logout
+{
+	float:left;
+	background-color: #333;
+	color:white;
+	margin-left:570px;
+	padding:13px;
+}
+
+ 
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: red;
+}
+body{
+ background-image: url("https://cdn.wallpapersafari.com/84/73/ekZuC2.jpg");
+ background-repeat: no-repeat;
+}
+.con{
+  paddding-top:1000px
+}
+.container{
+  height:450px;
+  width:300px;
+  padding:50px;
+  
+  border : 1px solid;
+  background-color:white;
+}
+select{
+  width: 25%;
+  padding: 7px 7px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type=text]:focus {
+  border: 3px solid #555;
+  
+}
+input[type=submit] {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+</style>
+</head>
+ <center>
+<body>
+<ul>
+<li><a href=index.html>Home</a></li>
+  <li><a href=dietplan.html>Diet plans</a></li>
+  <li><a href=bmi.html>BMI Calculator</a></li>
+  <li><a href=contact.html>Contact us</a></li>
+   <li><a href=about.html>About us</a></li>
+</ul>
+   <div padding-left:1000px class = con>
+   <div class=container>
+     <center>
+<h1>Body Mass Index Calculator</h1>
+<h3>Enter your height: <input type="text" id="height"/>
+    <select type="multiple" id="heightunits">
+        <option value="metres" selected="selected">metres</option>
+        <option value="inches">inches</option>
+    </select>
+     </h3>
+<h3>Enter your weight: <input type="text" id="weight"/>
+    <select type="multiple" id="weightunits">
+        <option value="kg" selected="selected">kilograms</option>
+        <option value="lb">pounds</option>
+    </select>
+  </h3>
+<input type="submit" value="computeBMI" onclick="computeBMI();">
+<h1>Your BMI is: <span id="output">?</span></h1>
+
+<h2>This means you are: <span id="comment"> ?</span> </h2>
+     </center>
+   </div>
+   </div>
+
+    <script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}">
+    </script>
+    <script>
+    function computeBMI()
+    {
+        //Obtain user inputs
+        var height=Number(document.getElementById("height").value);
+        var heightunits=document.getElementById("heightunits").value;
+        var weight=Number(document.getElementById("weight").value);
+        var weightunits=document.getElementById("weightunits").value;
+
+
+        //Convert all units to metric
+        if (heightunits=="inches") height/=39.3700787;
+        if (weightunits=="lb") weight/=2.20462;
+
+        //Perform calculation
+        var BMI=weight/Math.pow(height,2);
+
+        //Display result of calculation
+        document.getElementById("output").innerText=Math.round(BMI*100)/100;
+
+        var output = Math.round(BMI*100)/100
+        if (output<18.5)
+        document.getElementById("comment").innerText = "Underweight";
+      else if (output>=18.5 && output<=25)
+        document.getElementById("comment").innerText = "Normal";
+       else if (output>=25 && output<=30)
+        document.getElementById("comment").innerText = "Obese";
+     else if (output>30)
+        document.getElementById("comment").innerText = "Overweight";
+       // document.getElementById("answer").value = output;
+    }
+    </script>
+
+ </body>
+  </center>
+</html>

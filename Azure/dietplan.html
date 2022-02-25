@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8"/>
+    <title>Spring Boot Thymeleaf - Bootstrap WebJars</title>
+<style>
+	ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+color:white;
+}
+.logout
+{
+	float:left;
+	background-color: #333;
+	color:white;
+	padding:13px;
+	margin-left:550px;
+}
+
+ 
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: red;
+}
+    body {
+        padding: 2rem 0rem;
+    }
+    
+    img {
+        height: 150px;
+        width: 100%;
+    }
+    
+    .item {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    
+    .item-card {
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    
+    .item-card-title {
+        font-size: 15px;
+        transition: 1s;
+        cursor: pointer;
+    }
+    
+    .item-card-title i {
+        font-size: 15px;
+        transition: 1s;
+        cursor: pointer;
+        color: #ffa710
+    }
+    
+    .card-title i:hover {
+        transform: scale(1.25) rotate(100deg);
+        color: #18d4ca;
+    }
+    
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+    }
+    
+    .card-text {
+        height: 80px;
+    }
+    
+    .card::before,
+    .card::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: scale3d(0, 0, 1);
+        transition: transform .3s ease-out 0s;
+        background: rgba(255, 255, 255, 0.1);
+        content: '';
+        pointer-events: none;
+    }
+    
+    .card::before {
+        transform-origin: left top;
+    }
+    
+    .card::after {
+        transform-origin: right bottom;
+    }
+    
+    .card:hover::before,
+    .card:hover::after,
+    .card:focus::before,
+    .card:focus::after {
+        transform: scale3d(1, 1, 1);
+    }
+</style>
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css} "/>
+</head>
+<body>
+<ul>
+<li><a href=index.html>Home</a></li>
+  <li><a href=dietplan.html>Diet plans</a></li>
+  <li><a href=bmi.html>BMI Calculator</a></li>
+  <li><a href=contact.html>Contact us</a></li>
+   <li><a href=about.html>About us</a></li>
+</ul>
+
+<div class="container">
+    <div class="row">
+        <div class="col-10000 col-sm-10000 col-md-10000 col-lg-10000">
+            <div class="card">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs" id="bologna-list" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#description" role="tab" aria-controls="description" aria-selected="true">Over Weight</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#history" role="tab" aria-controls="history" aria-selected="false">Under Weight</a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="card-body">
+
+                    <div class="tab-content mt-3">
+                        <div class="tab-pane active" id="description" role="tabpanel">
+                            <!--Inside blocks-->
+                            <div class="tab-content mt-3">
+                                <div class="tab-pane active" id="description" role="tabpanel">
+                                    <div class="container mt-2">
+                                        <div class="row">
+                       
+                                            <div class="col-md-6 col-sm-6 item">
+                                                <div class="card item-card card-block">
+                                                   <a th:href="@{/30days}"> <img src="https://im.indiatimes.in/media/content/2018/May/_1525435176.jpg" alt="Photo of sunset"></a>
+                                                    <h5 class="item-card-title mt-3 mb-3">30 days plan </h5>
+                                                    <p class="card-text">The idea behind the Whole30 program is simple — just completely following the workouts in a period of 30 days may loss your weight. </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 item">
+                                                <div class="card item-card card-block">
+                                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT160wvvtXLSmrFhUtUJd6_O273SvD_JqFpkPL7M-lozZ7YnW8H6eURdsugHVJPMS6F3X8&usqp=CAU" alt="Photo of sunset">
+                                                    <h5 class="card-title  mt-3 mb-3">1 week plan </h5>
+                                                    <p class="card-text">The idea behind the Whole 1 week program is simple — just completely following the workouts in a period of 1 week may loss your weight. </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 item">
+                                                <div class="card item-card card-block">
+
+                                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk2zu1zio_kKMYaw-JCnyCe_3WSJxmfCe0zjFILGIHse8l10cfc_TOoFsxz4vBImQZ2_I&usqp=CAU" alt="Photo of sunset">
+                                                    <h5 class="card-title  mt-3 mb-3">2 months plan</h5>
+                                                    <p class="card-text">The idea behind the Whole 2 months program is simple — just completely following the workouts in a period of 2 months may loss your weight.
+                                                        </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 item">
+                                                <div class="card item-card card-block">
+
+                                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThHsxhnoAqmjOjo30xhQZwBicnPeIu_OpHwqOjfQ9wVVI6ZE71YbuKDLVRTC4K7BCsudo&usqp=CAU" alt="Photo of sunset">
+                                                    <h5 class="card-title  mt-3 mb-3">1 year plan</h5>
+                                                    <p class="card-text">The idea behind the Whole 1 year program is simple — just completely following the workouts in a period of 1 year may loss your weight.
+                                                        </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <!--end of inside blocks-->
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="history" role="tabpanel" aria-labelledby="history-tab">
+                                    <!--  inside cards -->
+                                    <div class="tab-content mt-3">
+                                        <div class="tab-pane active" id="description" role="tabpanel">
+                                            <div class="container mt-2">
+                                                <!--   <div class="card card-block mb-2">
+      <h4 class="card-title">Card 1</h4>
+      <p class="card-text">Welcom to bootstrap card styles</p>
+      <a href="#" class="btn btn-primary">Submit</a>
+    </div>   -->
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-6 item">
+                                                        <div class="card item-card card-block">
+                                                            <img src="https://im.indiatimes.in/media/content/2018/May/_1525435176.jpg" alt="Photo of sunset">
+                                                            <h5 class="item-card-title mt-3 mb-3">30 days plan </h5>
+                                                            <p class="card-text">The idea behind the Whole30 program is simple — just completely following the workouts in a period of 30 days may gain your weight. </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 item">
+                                                        <div class="card item-card card-block">
+                                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT160wvvtXLSmrFhUtUJd6_O273SvD_JqFpkPL7M-lozZ7YnW8H6eURdsugHVJPMS6F3X8&usqp=CAU" alt="Photo of sunset">
+                                                            <h5 class="card-title  mt-3 mb-3">1 week plan </h5>
+                                                            <p class="card-text">The idea behind the Whole 1 week program is simple — just completely following the workouts in a period of 1 week may gain your weight. </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 item">
+                                                        <div class="card item-card card-block">
+
+                                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk2zu1zio_kKMYaw-JCnyCe_3WSJxmfCe0zjFILGIHse8l10cfc_TOoFsxz4vBImQZ2_I&usqp=CAU" alt="Photo of sunset">
+                                                            <h5 class="card-title  mt-3 mb-3">2 months plan</h5>
+                                                            <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6 col-sm-6 item">
+                                                        <div class="card item-card card-block">
+
+                                                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThHsxhnoAqmjOjo30xhQZwBicnPeIu_OpHwqOjfQ9wVVI6ZE71YbuKDLVRTC4K7BCsudo&usqp=CAU" alt="Photo of sunset">
+                                                            <h5 class="card-title  mt-3 mb-3">1 year plan</h5>
+                                                            <p class="card-text">This is a company that builds websites, web apps and e-commerce solutions.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!--end of inside cards-->
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<script>
+    $('#bologna-list a').on('click', function(e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+</script>
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="icon" href="logo.jpg" type="image/jpg" sizes="25x25">
+
+<div class="container">
+			
+            <div id="st-box">
+                <img src="img/logo.jpg" style="width:180px; height:130px;">
+            
+             </div>
+              
+            <div id="nd-box">
+                <p class="heading">
+                    My Diet Assisstant
+                </p>
+            </div>
+           
+        </div>
+<title>Home Page</title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+color: white;
+}
+ 
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: red;
+}
+
+.logout
+{
+	float:left;
+	background-color: #333;
+	color:white;
+	padding:13px;
+	margin-left:500px;
+}
+.logo
+{
+  height:110px;
+  width:110px;
+  border-radius: 50%;
+}
+
+.container img
+{
+ height:200px;
+ width:240px;
+}
+.heading
+{
+  
+  font-style:Garamond;
+  padding:20px;
+  font-size:30px;
+}
+.container {
+            width:600px;
+            height:140px;
+            padding-left:5px;
+            padding-right:15px;
+        }
+        #st-box {
+            float:left;
+            width:120px;
+            height:60px;
+            background-color:white;
+            
+        }
+        #nd-box {
+            float:left;
+            width:320px;
+            height:60px;
+            background-color:white;
+           
+            margin-left:20px;
+        }
+        
+        .carousel-inner img
+        {
+        width:1500px;
+        height:600px;
+        }
+        
+</style>
+<ul>
+<li><a href=index.html>Home</a></li>
+  <li><a href=dietplan.html>Diet plans</a></li>
+  <li><a href=bmi.html>BMI Calculator</a></li>
+  <li><a href=contact.html>Contact us</a></li>
+   <li><a href=about.html>About us</a></li>
+</ul>
+ <div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item">
+      <img src="https://p4.wallpaperbetter.com/wallpaper/16/467/744/sport-diet-healthy-food-health-care-wallpaper-preview.jpg">
+    </div>
+    <div class="carousel-item">
+      <img src="https://w0.peakpx.com/wallpaper/654/542/HD-wallpaper-healthy-food-heart-of-fruits-and-vegetables-good-nutrition-diet-slimming-weight-loss.jpg">
+    </div>
+    
+    <div class="carousel-item active">
+      <img src="img/caraousel1.jpeg">
+    </div>
+  </div>
+  
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+
+</div>
+<center><p style="color:rgb(79, 78, 73); font-size:20px;padding:30px;">My diet Assisstant is a USDA-sponsored website that offers credible information to help you make healthful eating choices.</p></center>
+
+
+
+
+
+
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css} "/>
+</head>
+<body>
+<center><h1 style="color:rgb(9, 118, 227);">Trending Topics</h1></center>
+<hr style="width:75%; border-top: 1px solid yellow;">
+<div class="container">
+    <div class="row">
+        <div class="col-10000 col-sm-10000 col-md-10000 col-lg-10000">
+            <div>
+                
+                <div>
+
+                    <div class="tab-content mt-3">
+                        <div class="tab-pane active" id="description" role="tabpanel">
+                            <!--Inside blocks-->
+                            <div class="container mt-2">
+
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6 item">
+                                        <div>
+                                            <img src="img/highbloodpressure.jpeg" alt="Photo of sunset">
+                                            <h5>High Blood Pressure</h5>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 item">
+                                        <div>
+                                            <img src="img/occassional.jpeg" alt="Photo of sunset">
+                                            <h5>Seasonal Reciepies</h5>
+                                            
+                                        </div>
+                                  </div>
+                                      <div class="col-md-3 col-sm-6 item">
+                                        <div>
+                                            <img src="img/onlinetools.jpeg" alt="Photo of sunset">
+                                            <h5>Online Tools</h5>
+                                           
+                                        </div>
+                                    </div>
+                                  <div class="col-md-3 col-sm-6 item">
+                                        <div>
+                                            <img src="img/diet.jpeg" alt="Photo of sunset">
+                                            <h5>Healthy diet</h5>
+                                           
+                                        </div>
+                                    </div>
+                                  </div>
+                              
+                               <div class="row">
+                                    <div class="col-md-3 col-sm-6 item">
+                                        <div>
+                                            <img src="img/diestcollection.jpeg" alt="Photo of sunset">
+                                            <h5>Historical Dietary Guidance Digital Collection</h5>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6 item">
+                                        <div>
+                                            <img src="img/fooddatacenter.jpeg" alt="Photo of sunset">
+                                            <h5>USDA FoodData Central</h5>
+                                           
+                                        </div>
+                                  </div>
+                                      <div class="col-md-3 col-sm-6 item">
+                                        <div>
+                                            <img src="img/foodkeeperapp.jpeg" alt="Photo of sunset">
+                                            <h5>FoodKeeper App</h5>
+                                           
+                                        </div>
+                                    </div>
+                                 <div class="col-md-3 col-sm-6 item">
+                                        <div>
+                                            <img src="img/vegetables.jpeg" alt="Photo of sunset">
+                                            <h5>USDA REE Resources</h5>
+                                           
+                                        </div>
+                                    </div>
+                                  </div>
+                                  </div>
+                                  </div>
+                                  </div>
+                                  </div>
+                                  </div>
+                                  </div>
+                                  </div>
+                                  </div>
+                            
+
+                     
+</body>
+</html>
